@@ -1,0 +1,43 @@
+
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+    <script src="app.js"></script>
+    <script src="directive.js"></script>
+    <script src="todoFilters.tpl.html"></script>
+    <script src="todoForm.tpl.html"></script>
+    <script src="controllers.js"></script>
+    <script src="service.js"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div ng-app="todo" ng-controller="todoCtrl">
+      <todo-title></todo-title>
+      <hr>
+      <todo-form></todo-form>
+      <hr>
+      <ul>
+        <li ng-repeat="todo in todos | filter:statusFilter">
+          <todo-item></todo-item>
+        </li>
+      </ul>
+      <hr>
+      <todo-filters></todo-filters>
+    </div>
+
+  </body>
+
+  </html>

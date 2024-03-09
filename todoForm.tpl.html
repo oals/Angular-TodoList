@@ -1,0 +1,12 @@
+<form name="todoForm" ng-submit="add(newTodoTitle)">
+  <div class="input-group">
+    <input type="text" ng-model="newTodoTitle" placeholder="할 일을 기록해보세요." minlength="3">
+
+
+    <button type="submit" class="btn btn-success">추가</button>
+  </div>
+  <div ng-show="todoForm.$dirty && todoForm.$invalid">
+    <div class="alert alert-danger" role="alert">세 자리이상 입력해주세요.</div>
+  </div>
+
+</form>

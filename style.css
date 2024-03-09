@@ -1,0 +1,13 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+
+.input-group>.ng-valid.ng-dirty {
+  border: 5px solid green;
+}
+
+.input-group>.ng-invalid.ng-dirty {
+  border: 5px solid red;
+}
